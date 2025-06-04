@@ -27,8 +27,7 @@ class Budget:
         print(f"\n[{selected}] 카테고리 상세 내역")
         for e in self.expenses:
             if e.category == selected:
-                print(e)
-        print()         
+                print(e)      
 
     def category_expenses(self):
         if not self.expenses:
@@ -44,10 +43,9 @@ class Budget:
             for category, total in summary.items():
                 print(f"{category}: {total}원")
             print()
-        
-            detailYN = input("상세 조회하려면 \"/F\", 메뉴로 돌아가려면 아무 키나 누르세요> ").strip()
+            detailYN = input("상세 조회하려면 \"/F\", 메뉴로 돌아가려면 아무 키나 누르세요: ").strip()
             if detailYN == "/F":
-                selected = input("상세 조회할 카테고리명을 입력하세요> ").strip()
+                selected = input("상세 조회할 카테고리명을 입력하세요: ").strip()
                 self.category_detail(selected, summary)
             else:
                 break
