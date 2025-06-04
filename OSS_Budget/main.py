@@ -13,10 +13,10 @@ def main():
         choice = input("선택 > ")
 
         if choice == "1":
-            category = input("카테고리 (예: 식비, 교통 등): ")
-            description = input("설명: ")
+            category = input("카테고리 (예: 식비, 교통 등): ").strip()
+            description = input("설명: ").strip()
             try:
-                amount = int(input("금액(원): "))
+                amount = int(input("금액(원): ").strip())
             except ValueError:
                 print("잘못된 금액입니다.\n")
                 continue
